@@ -1,82 +1,26 @@
-local Has2xInventory = nil
-
-local Items = {
-    ["Ancient Scroll"] = 0,
-    ["Blue Candy"] = 0,
-    ["Bottle of Blood"] = 0,
-    ["Caesar's Headband"] = 0,
-    ["Christmas Present"] = 0,
-    ["Clackers"] = 0,
-    ["Diamond"] = 0,
-    ["Dio's Bone"] = 0,
-    ["Dio's Diary"] = 0,
-    ["Gold Coin"] = 0,
-    ["Green Candy"] = 0,
-    ["Heart of The Saint's Corpse"] = 0,
-    ["Heavenly Arrow"] = 0,
-    ["Left Arm of The Saint's Corpse"] = 0,
-    ["Lucky Arrow"] = 0,
-    ["Lucky Stone Mask"] = 0,
-    ["Mysterious Arrow"] = 0,
-    ["Mysterious Bow"] = 0,
-    ["Pelvis of The Saint's Corpse"] = 0,
-    ["Pure Rokakaka"] = 0,
-    ["Quinton's Glove"] = 0,
-    ["Red Candy"] = 0,
-    ["Redeemed Rokakaka"] = 0,
-    ["Requiem Arrow"] = 0,
-    ["Rib Cage of The Saint's Corpse"] = 0,
-    ["Rokakaka"] = 0,
-    ["Stand Virus Capsule"] = 0,
-    ["Steel Ball"] = 0,
-    ["Stone Mask"] = 0,
-    ["Yellow Candy"] = 0,
-    ["Zepellin's Headband"] = 0,
-    ["Zeppeli's Hat"] = 0,
+return {
+    Items = {
+        ["Ancient Scroll"] = 0, ["Blue Candy"] = 0, ["Bottle of Blood"] = 0, ["Caesar's Headband"] = 0,
+        ["Christmas Present"] = 0, ["Clackers"] = 0, ["Diamond"] = 0, ["Dio's Bone"] = 0, ["Dio's Diary"] = 0,
+        ["Gold Coin"] = 0, ["Green Candy"] = 0, ["Heart of The Saint's Corpse"] = 0, ["Heavenly Arrow"] = 0,
+        ["Left Arm of The Saint's Corpse"] = 0, ["Lucky Arrow"] = 0, ["Lucky Stone Mask"] = 0, ["Mysterious Arrow"] = 0,
+        ["Mysterious Bow"] = 0, ["Pelvis of The Saint's Corpse"] = 0, ["Pure Rokakaka"] = 0, ["Quinton's Glove"] = 0,
+        ["Red Candy"] = 0, ["Redeemed Rokakaka"] = 0, ["Requiem Arrow"] = 0, ["Rib Cage of The Saint's Corpse"] = 0,
+        ["Rokakaka"] = 0, ["Stand Virus Capsule"] = 0, ["Steel Ball"] = 0, ["Stone Mask"] = 0, ["Yellow Candy"] = 0,
+        ["Zepellin's Headband"] = 0, ["Zeppeli's Hat"] = 0,
+    },
+    MaxItems = {
+        ["Ancient Scroll"] = 10, ["Blue Candy"] = 30, ["Bottle of Blood"] = 10, ["Caesar's Headband"] = 10,
+        ["Christmas Present"] = 10, ["Clackers"] = 10, ["Diamond"] = 30, ["Dio's Bone"] = 5, ["Dio's Diary"] = 10,
+        ["Gold Coin"] = 45, ["Green Candy"] = 30, ["Heart of The Saint's Corpse"] = 5, ["Heavenly Arrow"] = 5,
+        ["Left Arm of The Saint's Corpse"] = 5, ["Lucky Arrow"] = 10, ["Lucky Stone Mask"] = 10, ["Mysterious Arrow"] = 25,
+        ["Mysterious Bow"] = 10, ["Pelvis of The Saint's Corpse"] = 5, ["Pure Rokakaka"] = 10, ["Quinton's Glove"] = 10,
+        ["Red Candy"] = 30, ["Redeemed Rokakaka"] = 25, ["Requiem Arrow"] = 5, ["Rib Cage of The Saint's Corpse"] = 25,
+        ["Rokakaka"] = 25, ["Stand Virus Capsule"] = 10, ["Steel Ball"] = 10, ["Stone Mask"] = 10, ["Yellow Candy"] = 30,
+        ["Zepellin's Headband"] = 10, ["Zeppeli's Hat"] = 10,
+    },
+    Priority = {
+        "Lucky Arrow",
+        "Lucky Stone Mask",
+    }
 }
-
-local MaxItems = {
-    ["Ancient Scroll"] = 10,
-    ["Blue Candy"] = 30,
-    ["Bottle of Blood"] = 10,
-    ["Caesar's Headband"] = 10,
-    ["Christmas Present"] = 10,
-    ["Clackers"] = 10,
-    ["Diamond"] = 30,
-    ["Dio's Bone"] = 5,
-    ["Dio's Diary"] = 10,
-    ["Gold Coin"] = 45,
-    ["Green Candy"] = 30,
-    ["Heart of The Saint's Corpse"] = 5,
-    ["Heavenly Arrow"] = 5,
-    ["Left Arm of The Saint's Corpse"] = 5,
-    ["Lucky Arrow"] = 10,
-    ["Lucky Stone Mask"] = 10,
-    ["Mysterious Arrow"] = 25,
-    ["Mysterious Bow"] = 10,
-    ["Pelvis of The Saint's Corpse"] = 5,
-    ["Pure Rokakaka"] = 10,
-    ["Quinton's Glove"] = 10,
-    ["Red Candy"] = 30,
-    ["Redeemed Rokakaka"] = 25,
-    ["Requiem Arrow"] = 5,
-    ["Rib Cage of The Saint's Corpse"] = 25,
-    ["Rokakaka"] = 25,
-    ["Stand Virus Capsule"] = 10,
-    ["Steel Ball"] = 10,
-    ["Stone Mask"] = 10,
-    ["Yellow Candy"] = 30,
-    ["Zepellin's Headband"] = 10,
-    ["Zeppeli's Hat"] = 10,
-}
-
-local Priority = {
-    "Lucky Arrow",
-    "Lucky Stone Mask",
-}
-
-if Has2xInventory then
-    for itemName, baseValue in pairs(MaxItems) do
-        MaxItems[itemName] = baseValue * 2
-    end
-end
